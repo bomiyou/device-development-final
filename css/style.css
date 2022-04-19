@@ -1,0 +1,937 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Raleway:ital,wght@0,100;0,400;0,600;1,100&display=swap');
+
+/*General styles */
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+  scroll-behavior: smooth;
+  font-family: 'Raleway', sans-serif;
+}
+
+body{
+  
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  
+}
+
+a{
+  text-decoration: none;
+  color: #000000;
+}
+
+ul{
+  list-style: none;
+}
+
+img{
+  width: 100%;
+  
+}
+
+
+.transition-1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  background-color: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s ease-out;
+}
+
+.transition-1.is-active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.transition-2 {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  bottom: 0;
+  z-index: 101;
+  background-color: bisque;
+  transition: 0.5s ease-out;
+}
+
+.transition-2.is-active {
+  left: 0px;
+}
+
+.transition-3 {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  background-color: black;
+  transition: 0.5s ease-out;
+}
+
+.transition-3.is-active {
+  top: 0;
+}
+
+
+
+
+
+
+/* Header */
+
+header{
+  width: 100%;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  font-family: 'Raleway', sans-serif;
+  
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  color: black;
+  font-size: 1.05rem;
+  padding-left: 30px;
+  padding-right: 30px;
+  
+}
+
+.logo{
+  width: 60px;
+  
+}
+
+.navbar-links ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+ 
+}
+
+.navbar-links li{
+  list-style: none;
+
+}
+
+.navbar-links li a{
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+  display: block;
+}
+
+.navbar-links li :hover{
+  font-weight: bold;
+}
+
+.toggle-button{
+  position: absolute;
+  top: 30px;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+
+}
+
+.toggle-button .bar{
+  height: 3px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+
+}
+
+
+
+/* button */
+.rounded-button {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  text-decoration: none;
+  transition:0.2s;
+  
+  
+  
+}
+
+.rounded-button:hover {
+  transform: scale(1.2);
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+  transition: .4s;
+
+}
+
+/* landing page */
+.header-content{
+  background-color: #f5f5f5;
+  width: 100%;
+  position: relative;
+  margin-top: 2.5vw;
+}
+
+.main-image{
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  
+}
+
+.main-text{
+  position: absolute;
+  top: 305px;
+  left: 200px;
+  font-size: 70px;
+}
+
+.circle-line{
+  border: 1px solid black;
+  height: 200px;
+  width: 650px;
+  border-radius: 50%;
+  position: absolute;
+  left: 150px;
+  top: 290px;  
+}
+
+.text-1{ 
+  width: 680px;
+  position:relative;
+  text-align: right;
+  float: right;
+  right: 150px;
+  bottom: 200px;
+  font-size: 40px; 
+}
+
+.rounded-button{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: relative;
+  bottom: 100px;
+}
+
+
+
+/* about page */
+.about{
+  width: 100%;
+  height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image{
+  height: auto;
+  width: 500px;
+  max-width: 100%;
+}
+
+.star-small{
+  height: auto;
+  width: 50px;
+}
+
+.about-text{
+  width: 550px;
+  max-width: 100%;
+  padding: 0 10px;
+  
+}
+
+.about-text h1{
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.about-main{
+  font-family:'Raleway', sans-serif; 
+  font-weight: 400;
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content: space-around;
+ 
+
+}
+
+.about-button{
+  width: 100px;
+  height: 100px;
+  background-color: #f5f5f5;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid black;
+  text-decoration: none;
+  transition:0.2s;
+  padding: 0;
+  
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+}
+
+.about-button:hover{
+  transform: scale(1.2);
+  background-color: black;
+  
+  color: white;
+  transition: .4s;
+}
+
+.sub-text-about{
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  display: flex;
+
+ 
+}
+
+
+
+/* responsive nav bar */
+@media screen and (max-width: 600px) {
+  .toggle-button{
+    display: flex;
+  }
+
+  .navbar-links{
+    display: none;
+    width: 100%;
+  }
+
+  .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+   
+
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li{
+    text-align: center;
+  }
+
+  .navbar-links li a{
+    padding: .5rem 1rem;
+  }
+
+  .navbar-links.active{
+    display: flex;
+  }
+}
+/* line animation */
+.Letter-animation{    
+        font-weight: 400;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        letter-spacing: 6px;
+        margin: 0;
+        white-space: nowrap;
+    
+        
+}
+
+.animate-me{
+  margin: 20px;
+  animation: marqueeAnimation 15s linear infinite;
+  animation-iteration-count: infinite;
+  
+}
+
+@keyframes marqueeAnimation{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
+
+}
+
+span{
+  font-family: 'BIZ UDPMincho', serif;
+  font-style: italic;
+  background-color: rgb(227, 227, 227);
+  color:#000000;
+  padding: 0;
+  border-radius: 50px;
+
+}
+/* project title */
+.accent-title{
+  font-size: 30px;
+  font-weight: 600;
+  border-bottom: 1px solid black;
+  width: fit-content;
+  color: #000000;
+  padding: 10px;
+  margin-bottom: 5vw;
+ 
+}
+
+
+
+/* project page */
+canvas {
+  position: fixed;
+  z-index: 2;
+  pointer-events: none;
+  
+}
+
+section {
+  position: relative;
+  padding: 10vh 2vw;
+  height: 100vh;
+  width: 100vw;
+  
+}
+.projects {
+  width: 100%;
+  height: 100%;
+}
+
+.projects ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.projects li {
+  position: relative;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  font-size: 5vw;
+  font-weight: 400;
+}
+
+
+
+.accent {
+  font-family: 'BIZ UDPMincho', serif;
+  font-style: italic;
+  font-size: 20px; 
+  border: 1px solid black;
+  color:rgb(10, 29, 3);
+  padding: 5px;
+  border-radius: 100px;
+  width: fit-content;
+  display: inline-block;
+  letter-spacing: 5px;
+  
+
+}
+
+.hover-reveal {
+	position: absolute;
+	width: 300px;
+	top: 50%;
+	left: 50%;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	opacity: 0;
+	transform: scale(0.8);
+	transition: all .5s ease-out;
+}
+
+.hover-reveal img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: relative;
+	transition: transform .4s ease-out;
+}
+
+.arrow{
+  width: 10vh;
+  float: right;
+}
+
+  
+.arrow:hover{
+  transform: rotate(-15deg);
+}
+ /* project */
+@media screen and (max-width : 600px) {
+  section {
+    position: relative;
+    padding: 10vh 2vw;
+    height: 60vh;
+    width: 100vw;
+  }
+
+  .arrow{
+    width: 50px;
+    float: right;
+  }
+  
+  .arrow:hover{
+    transform: rotate(-15deg);
+  }
+  
+  .hover-reveal {
+    width: 150px;
+  }
+
+  .accent-title{
+    font-size: 20px;
+  }
+
+}
+
+/* contact */
+.contact{
+  position: relative;
+  padding: 10vh 2vw;
+  width: 100vw;
+  height: 100vh;
+  align-content: center;
+  margin-top: 100px;
+}
+
+.contact-text h1{
+  font-size: 30px;
+  font-weight: 600;
+  border-bottom: 1px solid black;
+  width: fit-content;
+  color: #000000;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.contact-text p{
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 5%;
+  
+}
+
+.contact ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.contact li {
+  position: relative;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  font-size: 3vw;
+  font-weight: 400;
+  padding: 20px;
+}
+
+.arrow-2{
+  width: 7vh;
+  float: right;
+}
+
+.arrow-2:hover{
+  transform: rotate(-15deg);
+}
+
+ /* contact */
+ @media screen and (max-width : 600px) {
+  .contact {
+    position: relative;
+    padding: 10vh 2vw;
+    height: 0;
+    width: 100vw;
+  }
+
+  .arrow-2{
+    width: 50px;
+    float: right;
+  }
+  
+  .arrow-2:hover{
+    transform: rotate(-15deg);
+  }
+
+
+  .contact-text h1{
+    font-size: 20px;
+  }
+
+  .contact-text p{
+    width: 410px;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 5%;
+  }
+
+  .contact li {
+    position: relative;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    font-size: 5vw;
+    font-weight: 400;
+    
+  }
+}
+
+
+
+
+/* responsive landing page */
+@media screen and (max-width: 600px) {
+.main-image{
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  opacity: 60%;
+}
+
+.main-text{
+  position: absolute;
+  top: 300px;
+  left: 50px;
+  font-size: 35px;
+}
+
+.circle-line{
+  border: 1px solid black;
+  height: 100px;
+  width: 315px;
+  border-radius: 50%;
+  position: absolute;
+  left: 30px;
+  top: 290px;  
+}
+
+.text-1{ 
+  position: relative;
+  text-align: right;
+  right: 20px;
+  bottom: 50px;
+  font-size: 20px; 
+}
+
+.rounded-button{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: relative;
+  bottom: 60px;
+}
+
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 767px){
+  
+  .main-image{
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    opacity: 60%;
+  }
+  
+  .main-text{
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    font-size: 40px;
+  }
+  
+  .circle-line{
+    border: 1px solid black;
+    height: 100px;
+    width: 370px;
+    border-radius: 50%;
+    position: absolute;
+    left: 30px;
+    top: 300px;  
+  }
+  
+  .text-1{ 
+    position: relative;
+    text-align: right;
+    right: 10px;
+    bottom: 110px;
+    font-size: 20px; 
+  }
+  
+  .rounded-button{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    bottom: 100px;
+  }
+  
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  .main-image{
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    opacity: 60%;
+  }
+  
+  .main-text{
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    font-size: 45px;
+  }
+  
+  .circle-line{
+    border: 1px solid black;
+    height: 120px;
+    width: 395px;
+    border-radius: 50%;
+    position: absolute;
+    left: 30px;
+    top: 300px;  
+  }
+  
+  .text-1{ 
+    position: relative;
+    text-align: right;
+    right: 5%;
+    bottom: 110px;
+    font-size: 22px; 
+  }
+  
+  .rounded-button{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    bottom: 60px;
+    }
+
+    
+   
+}
+
+@media screen and (min-width: 1024px){
+  .main-image{
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    opacity: 60%;
+  }
+  
+  .main-text{
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    font-size: 48px;
+  }
+  
+  .circle-line{
+    border: 1px solid black;
+    height: 120px;
+    width: 395px;
+    border-radius: 50%;
+    position: absolute;
+    left: 30px;
+    top: 300px;  
+  }
+  
+  .text-1{ 
+    position: relative;
+    text-align: right;
+    right: 5%;
+    bottom: 110px;
+    font-size: 25px; 
+  }
+  
+  .rounded-button{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    bottom: 80px;
+    }
+ 
+}
+
+@media screen and (min-width: 1224px){
+  .main-image{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    opacity: 60%;
+  }
+  
+  .main-text{
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    font-size: 55px;
+  }
+  
+  .circle-line{
+    border: 1px solid black;
+    height: 140px;
+    width: 495px;
+    border-radius: 50%;
+    position: absolute;
+    left: 70px;
+    top: 300px;  
+  }
+  
+  .text-1{ 
+    position: relative;
+    text-align: right;
+    right: 5%;
+    bottom: 100px;
+    font-size: 30px; 
+  }
+  
+  .rounded-button{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    bottom: 100px;
+    }
+
+}
+
+@media screen and (min-width: 1528px){
+  .main-image{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    opacity: 60%;
+  }
+  
+  .main-text{
+    position: absolute;
+    top: 305px;
+    left: 200px;
+    font-size: 70px;
+  }
+  
+  .circle-line{
+    border: 1px solid black;
+    height: 200px;
+    width: 650px;
+    border-radius: 50%;
+    position: absolute;
+    left: 150px;
+    top: 290px;  
+  }
+  
+  .text-1{ 
+    position: relative;
+    text-align: right;
+    right: 150px;
+    bottom: 200px;
+    font-size: 40px; 
+  }
+  
+  .rounded-button{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    bottom: 100px;
+  }
+
+  
+}
+
+@media screen and (max-width : 1180px) {
+  .about{
+    width: 100%;
+    height: auto;
+    padding: 70px 0px;
+  }
+  
+}
+
+/* about page and animation */
+@media screen and (max-width : 600px) {
+
+  .about .about-main{
+    margin-bottom: 35px;
+    width: 400px;
+    
+  }
+
+  .about-text{
+    margin-top: 35px;
+  }
+
+  .about-text h1{
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  .Letter-animation{
+    font-size: 15px;
+  }
+
+}
+
+/* project page- seperate */

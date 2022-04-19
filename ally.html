@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/vibrant.css">
+  <title>Ally</title>
+</head>
+<body>
+  <div class="transition transition-3 is-active"></div>
+
+  
+
+
+  <header>
+		<nav class="navbar">
+    
+			<!-- Logo -->
+			<div class="logo">
+				<a href = "./index.html"><img src="images/logo-real.png" alt=""></a>
+			</div>
+
+			<a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      
+			<!-- Navigation -->
+      <div class="navbar-links">
+			<ul>
+				<li><a href="./about.html">about</a></li>
+				<li><a href="./project.html">Project</a></li>
+			</ul>
+      </div>
+
+    </nav>
+     </header>
+
+			<!-- case Study -->
+
+    
+
+      <div class="container">
+        <a href="./project.html">
+          <button class="about-button" type="about-button" onclick="">
+            <ion-icon name="arrow-back-sharp" size="large"></ion-icon></ion-icon>
+            </button>
+          </a>
+      <div class="row">
+        <div class="col-1">
+          <h1>Ally</h1>
+         
+          <h2>“Share one’s thoughts anonymously and spread good messages towards others”
+          </h2>
+         
+
+        </div>
+
+        <div class="col-2">
+        <img src="./images/ally-04.png" class="controller">
+
+
+      </div>
+
+    </div>
+  </div>
+
+    <div class="container-2">
+
+      <div class="row">
+        <div class="col-3">
+          <h1>What?</h1>
+         
+          <p>“Ally” is a smart frame and social app that connects people who have their concerns in their lives. 
+
+            The main purpose of this app is to be able to share one’s thoughts anonymously and to spread good messages towards others.
+            
+            In a market known for disposable devices and planned obsolescence, Ally strives to promote a culture of sustainability by giving old materials a new purpose. 
+            </p>
+
+            
+
+            <h2>My Role</h2>
+            <h3>UX/UI <br> Branding</h3>
+
+            <h2>For</h2>
+            <h3>Group project in School</h3>
+         
+
+        </div>
+
+        <div class="col-4">
+          <img src="./images/Ally-01-07.png" class="mate-1">
+  
+  
+        </div>
+    </div>
+  </div>
+
+ 
+
+<section class="projects-section" id="project">
+  <div class="projects">
+
+    <div class="accent-title">Next Project</div> 
+    
+      <ul>
+       
+        <li>
+          <div class="link">
+            <div class="accent">AR/3D</div> PUPUP
+            <a href = "./pup.html">
+            <img class ="arrow"src="./images/6.png" alt=""></a>
+            <div class="hover-reveal image01">
+              <img class="hidden-img" src="./images/logo-04.png" alt="">
+            </div>
+        </div>
+        </li>
+
+        </ul>
+
+        </div>
+        </section>
+
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+     <script>
+
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+} )
+
+
+window.onload = () => {
+  
+  const transition_el = document.querySelector('.transition');
+
+  setTimeout(() => {
+    transition_el.classList.remove('is-active');
+  }, 500);
+
+  for (let i = 0; i < anchors.length; i++) {
+    const anchor = anchors[i];
+
+    anchor.addEventListener('click', e => {
+      e.preventDefault();
+      let target = e.target.href;
+
+      console.log(transition_el);
+
+      transition_el.classList.add('is-active');
+
+      console.log(transition_el);
+
+      setInterval(() => {
+        window.location.href = target;
+      }, 500);
+    })
+  }
+}
+
+const link = document.querySelectorAll('.link');
+const linkHoverReveal = document.querySelectorAll('.hover-reveal');
+const linkImages = document.querySelectorAll('.hidden-img');
+
+
+for(let i = 0; i < link.length; i++) {
+  link[i].addEventListener('mousemove', (e) => {
+    linkHoverReveal[i].style.opacity = 1;
+    linkHoverReveal[i].style.transform = `translate(-100%, -50% ) rotate(5deg)`;
+    linkImages[i].style.transform = 'scale(1, 1)';
+    linkHoverReveal[i].style.left = e.clientX + "px";
+  })
+  
+  link[i].addEventListener('mouseleave', (e) => {
+    linkHoverReveal[i].style.opacity = 0;
+    linkHoverReveal[i].style.transform = `translate(-50%, -50%) rotate(-5deg)`;
+    linkImages[i].style.transform = 'scale(0.8, 0.8)';
+    
+  })
+}
+ScrollReveal().reveal('.container', { 
+  delay: 200, reset: true, desktop: true, mobile: true, duration: 1000,  distance: '40px'});
+
+  ScrollReveal().reveal('.container-2', { 
+  delay: 200, reset: true, desktop: true, mobile: true, duration: 1000,  distance: '40px'});
+
+  ScrollReveal().reveal('.row', { 
+  delay: 400, reset: true, desktop: true, mobile: true, duration: 1000,  distance: '20px'});
+
+     </script>
+</body>
+</html>
